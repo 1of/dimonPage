@@ -402,9 +402,6 @@ $blue: #0543e4;
         }
         .item {
             width: 50%;
-            &:nth-child(1) {
-                order: 0;
-            }
             &:nth-child(2) {
                 order: 2;
             }
@@ -416,6 +413,8 @@ $blue: #0543e4;
             }
         }
         .icon-round {
+            height: 36px;
+            width: 36px;
             margin: 5px 0;
         }
     }
@@ -515,6 +514,36 @@ $blue: #0543e4;
             font-size: 16px;
             text-align: left;
             line-height: 19px;
+        }
+    }
+    // Section 6
+    .promoblock-wrapper__with-background_6 {
+        .container > div.row {
+            max-width: 100%;
+        }
+        .text-wrap {
+            flex-wrap: nowrap;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .item {
+            margin-right: 30px;
+            &:nth-child(2) {
+                order: 1;
+            }
+            &:nth-child(3) {
+                order: 2;
+            }
+        }
+        .icon-round {
+            margin: 5px 0;
         }
     }
 }
