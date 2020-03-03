@@ -651,12 +651,23 @@
   .promoblock-wrapper__with-background_6 .icon-round {
     margin: 5px 0;
   }
+  .promoblock-wrapper__with-background_7 .container {
+    padding-top: 115px;
+    padding-bottom: 174px;
+  }
+  .promoblock-wrapper__with-background_7 h2 {
+    margin-top: 40px;
+  }
   .promoblock-wrapper__with-background_7 h2 .part-1 {
     display: inline;
     color: #000;
   }
   .promoblock-wrapper__with-background_7 h2 .part-2 {
     text-transform: lowercase;
+  }
+  .promoblock-wrapper__with-background_7 .text-wrap > p {
+    max-width: 272px;
+    margin: 15px 0 40px;
   }
   .promoblock-wrapper__with-background_7 .phone-black {
     height: 617px;

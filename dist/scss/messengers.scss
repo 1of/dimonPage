@@ -641,7 +641,12 @@ $blue: #0543e4;
   }
   // Section 7
   .promoblock-wrapper__with-background_7 {
+    .container {
+      padding-top: 115px;
+      padding-bottom: 174px;
+    }
     h2 {
+      margin-top: 40px;
       .part-1 {
         display: inline;
         color: #000;
@@ -649,6 +654,10 @@ $blue: #0543e4;
       .part-2 {
         text-transform: lowercase;
       }
+    }
+    .text-wrap > p {
+      max-width: 272px;
+      margin: 15px 0 40px;
     }
     .phone-black {
       height: 617px;
