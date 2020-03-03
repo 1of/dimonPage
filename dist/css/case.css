@@ -1,0 +1,208 @@
+.l-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.l-wrapper .container__nopad {
+  padding: 0;
+}
+
+.l-wrapper .page-top {
+  margin: 0;
+}
+
+.top-links_wrapper {
+  background: #f8f8f8;
+}
+
+.l-wrapper .tags-list {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  padding: 5px 50px 16px 50px;
+  justify-content: center;
+}
+
+.promoblock-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.promoblock-wrapper__with-background_1 {
+  background: url(../img/background-1.jpg) no-repeat center center;
+}
+
+.promoblock-wrapper__with-background_2 {
+  background: url(../img/background-2.gif) no-repeat center center;
+}
+
+.promoblock-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 47px;
+  color: #FFFFFF;
+  display: inline-block;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.promoblock-title_color__black {
+  color: #000000;
+}
+
+.promoblock-title_color__violet {
+  color: #4926E1;
+}
+
+.promoblock-title_mrgn-right__120 {
+  margin-right: 120px;
+}
+
+.promoblock-title_pddng-top__30 {
+  padding-top: 30px;
+}
+
+.promoblock-messenger-icons-block {
+  margin: 50px 0;
+  margin-left: 100px;
+  border: dashed 2px #FFFFFF;
+  border-radius: 21px;
+  width: 100%;
+  max-width: 880px;
+  background: url(../img/messengers-arrow.png) 65px center no-repeat;
+}
+
+.promoblock-messenger-icons-wrapper {
+  display: flex;
+  padding: 24px;
+  position: relative;
+}
+
+.promoblock-messenger-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promoblock-messenger-icon-link {
+  display: block;
+  border-radius: 18px;
+}
+
+.promoblock-messenger-icon-button {
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: bold;
+  color: #4926E1;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 216px;
+  height: 62px;
+  right: -112px;
+}
+
+.promoblock-messenger-icon-button-link, .promoblock-messenger-icon-button-link:visited {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 16px;
+  color: #4926E1;
+  border-radius: 6px;
+}
+
+.b-flex-clmn-wrapper {
+  display: flex;
+}
+
+.b-flex-clmn-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.b-flex-clmn-wrapper_algn-self__center {
+  align-self: center;
+}
+
+.promoblock-data-stat {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  color: #4926E1;
+  width: 142px;
+  margin-right: 20px;
+}
+
+.promoblock-data-stat_fs__50 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.promoblock-data-stat_fs__70 {
+  font-size: 70px;
+  line-height: 84px;
+}
+
+.promoblock-data-text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.promoblock-links {
+  font-size: 16px;
+  line-height: 22px;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+}
+
+.b-promoblock-link {
+  color: #0DA4FC;
+  text-decoration: underline;
+}
+
+.rotate {
+  overflow: hidden;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.rotate-bottom {
+  padding-top: 50px;
+}
+
+.rotate:after {
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  height: 500%;
+  width: 200%;
+  margin-left: -50%;
+}
+
+.rotate-white:after {
+  background-color: #fff;
+}
+
+.rotate:after {
+  content: '';
+  position: absolute;
+}
+
+.l-wrapper *, ::after, ::before {
+  box-sizing: inherit;
+}
