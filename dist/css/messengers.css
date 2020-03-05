@@ -269,6 +269,123 @@
   left: -1px;
 }
 
+/* The container */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin: auto;
+  top: -10px;
+  left: 30%;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  /* Style the checkmark/indicator */
+}
+
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #4926e1;
+}
+
+.checkbox-container .checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.option-all .checkbox-container {
+  top: 0;
+}
+
+form .check-toggle {
+  color: #b6b6b6;
+}
+
+.option-all {
+  background: #e2e9ed;
+}
+
+.option-all h3 {
+  font-size: 17px;
+  line-height: 56px;
+  margin-bottom: 0;
+}
+
+.option-item {
+  border: 1px solid #e2e9ed;
+  padding-top: 15px;
+}
+
+.option-item h3 {
+  font-size: 14px;
+}
+
+.option-item,
+.option-all {
+  padding-left: 10px;
+}
+
+.option-item .accordion,
+.option-item > h3,
+.option-all .accordion,
+.option-all > h3 {
+  display: inline-block;
+  width: calc(100% - 81px);
+}
+
+.option-item .checkbox,
+.option-all .checkbox {
+  display: inline-block;
+  height: 56px;
+  width: 66px;
+  vertical-align: top;
+}
+
 .promoblock-wrapper__with-background_3 > .container {
   background-color: #f1f4f6;
   padding-top: 30px;
@@ -615,11 +732,55 @@
 
 .promoblock-wrapper__with-background_12 .phone-wrap {
   width: 220px;
+  margin: auto;
 }
 
 .promoblock-wrapper__with-background_12 .btn-violet,
 .promoblock-wrapper__with-background_12 .btn-white-primary {
   display: block;
+}
+
+.promoblock-wrapper__with-background_13 {
+  color: #fff;
+}
+
+.promoblock-wrapper__with-background_13 .container {
+  background-image: url(/dist/img/mobile_bg_blue.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.promoblock-wrapper__with-background_13 .btn-white-primary {
+  display: block;
+  margin: 25px auto;
+}
+
+.promoblock-wrapper__with-background_13 .phone-wrap {
+  margin: auto;
+  height: 435px;
+  width: 303px;
+}
+
+.promoblock-wrapper__with-background_13 .phone-body {
+  background-size: contain;
+  height: 435px;
+  width: 207px;
+}
+
+.promoblock-wrapper__with-background_13 .phone-img {
+  left: 5px;
+  width: 196px;
+}
+
+.promoblock-wrapper__with-background_13 .phone-img-2 {
+  position: absolute;
+  bottom: -24px;
+  left: 100px;
+  z-index: 5;
+  width: 209px;
 }
 
 @media (max-width: 768px) {
@@ -907,15 +1068,83 @@
     font-size: 50px;
     width: 50px;
   }
+  .promoblock-wrapper__with-background_12 h2 {
+    max-width: 490px;
+  }
+  .promoblock-wrapper__with-background_12 .wrap1 {
+    margin-bottom: 35px;
+    padding-top: 0;
+  }
   .promoblock-wrapper__with-background_12 .wrap2 {
+    position: relative;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
     background-image: none;
   }
   .promoblock-wrapper__with-background_12 .wrap2 .btn-white-primary,
   .promoblock-wrapper__with-background_12 .wrap2 .phone-container {
     display: none;
   }
+  .promoblock-wrapper__with-background_12 .wrap2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: url(/dist/img/bg-referal.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .promoblock-wrapper__with-background_12 .wrap3 {
+    padding-top: 0;
+  }
+  .promoblock-wrapper__with-background_12 .phone-container {
+    margin: 0;
+    padding-right: 10%;
+  }
+  .promoblock-wrapper__with-background_12 .phone-wrap {
+    float: right;
+  }
   .promoblock-wrapper__with-background_12 .btn-violet {
+    margin-top: 15px;
     display: inline-block;
+  }
+  .promoblock-wrapper__with-background_13 .container {
+    background: url(/dist/img/bg-effectivity-messangers.png);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 13px;
+    padding-bottom: 158px;
+    margin-top: 60px;
+  }
+  .promoblock-wrapper__with-background_13 h2 {
+    text-align: left;
+  }
+  .promoblock-wrapper__with-background_13 .phone-img {
+    top: 1px;
+  }
+  .promoblock-wrapper__with-background_13 .text-wrap {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .promoblock-wrapper__with-background_13 .btn-white-primary {
+    display: inline-block;
+    margin: 0;
   }
 }
 
@@ -1157,5 +1386,48 @@
   }
   .promoblock-wrapper__with-background_11 .btn-violet {
     margin: 0;
+  }
+  .promoblock-wrapper__with-background_12 .text-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .promoblock-wrapper__with-background_12 .phone-container {
+    padding-right: 0;
+  }
+  .promoblock-wrapper__with-background_12 .phone-wrap {
+    width: 300px;
+  }
+  .promoblock-wrapper__with-background_12 .btn-violet {
+    margin-top: 35px;
+  }
+  .promoblock-wrapper__with-background_13 .container {
+    padding-top: 150px;
+    padding-bottom: 115px;
+    margin-top: 38px;
+  }
+  .promoblock-wrapper__with-background_13 .phone-body {
+    width: 292px;
+  }
+  .promoblock-wrapper__with-background_13 .phone-img {
+    left: 8px;
+    width: 275px;
+    border-radius: 24px;
+  }
+  .promoblock-wrapper__with-background_13 .phone-img-2 {
+    bottom: -32px;
+    left: 177px;
+    width: 294px;
+  }
+  .promoblock-wrapper__with-background_13 .text-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

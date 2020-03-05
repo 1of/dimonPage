@@ -266,6 +266,111 @@ $blue: #0543e4;
     }
 }
 
+// Checkboxes
+/* The container */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin: auto;
+    top: -10px;
+    left: 30%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Hide the browser's default checkbox */
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    & .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        /* Style the checkmark/indicator */
+        &:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 11px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    /* On mouse-over, add a grey background color */
+    &:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    & input:checked ~ .checkmark {
+        background-color: $violet;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    & .checkmark:after {
+        content: '';
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    & input:checked ~ .checkmark:after {
+        display: block;
+    }
+}
+.option-all .checkbox-container {
+    top: 0;
+}
+
+// toggle color
+form .check-toggle {
+    color: #b6b6b6;
+}
+
+// Check all container
+.option-all {
+    background: #e2e9ed;
+    h3 {
+        font-size: 17px;
+        line-height: 56px;
+        margin-bottom: 0;
+    }
+}
+// Check single item container
+.option-item {
+    border: 1px solid #e2e9ed;
+    padding-top: 15px;
+    h3 {
+        font-size: 14px;
+    }
+}
+.option-item,
+.option-all {
+    padding-left: 10px;
+    .accordion,
+    > h3 {
+        display: inline-block;
+        width: calc(100% - 81px);
+    }
+    .checkbox {
+        display: inline-block;
+        height: 56px;
+        width: 66px;
+        vertical-align: top;
+    }
+}
+
 // Section 3
 .promoblock-wrapper__with-background_3 {
     > .container {
@@ -565,10 +670,49 @@ $blue: #0543e4;
     }
     .phone-wrap {
         width: 220px;
+        margin: auto;
     }
     .btn-violet,
     .btn-white-primary {
         display: block;
+    }
+}
+
+// Section 13
+.promoblock-wrapper__with-background_13 {
+    color: #fff;
+    .container {
+        background-image: url(/dist/img/mobile_bg_blue.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .btn-white-primary {
+        display: block;
+        margin: 25px auto;
+    }
+    .phone-wrap {
+        margin: auto;
+        height: 435px;
+        width: 303px;
+    }
+    .phone-body {
+        background-size: contain;
+        height: 435px;
+        width: 207px;
+    }
+    .phone-img {
+        left: 5px;
+        width: 196px;
+    }
+    .phone-img-2 {
+        position: absolute;
+        bottom: -24px;
+        left: 100px;
+        z-index: 5;
+        width: 209px;
     }
 }
 
@@ -865,15 +1009,77 @@ $blue: #0543e4;
 
     // Section 12
     .promoblock-wrapper__with-background_12 {
+        h2 {
+            max-width: 490px;
+        }
+        .wrap1 {
+            margin-bottom: 35px;
+            padding-top: 0;
+        }
         .wrap2 {
+            position: relative;
+            color: #fff;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            margin-bottom: 35px;
             background-image: none;
             .btn-white-primary,
             .phone-container {
                 display: none;
             }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200%;
+                height: 100%;
+                background-image: url(/dist/img/bg-referal.png);
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+        }
+        .wrap3 {
+            padding-top: 0;
+        }
+        .phone-container {
+            margin: 0;
+            padding-right: 10%;
+        }
+        .phone-wrap {
+            float: right;
         }
         .btn-violet {
+            margin-top: 15px;
             display: inline-block;
+        }
+    }
+    // Section 13
+    .promoblock-wrapper__with-background_13 {
+        .container {
+            background: url(/dist/img/bg-effectivity-messangers.png);
+            background-position: 0 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 13px;
+            padding-bottom: 158px;
+            margin-top: 60px;
+        }
+        h2 {
+            text-align: left;
+        }
+        .phone-img {
+            top: 1px;
+        }
+        .text-wrap {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .btn-white-primary {
+            display: inline-block;
+            margin: 0;
         }
     }
 }
@@ -1146,6 +1352,48 @@ $blue: #0543e4;
         }
         .btn-violet {
             margin: 0;
+        }
+    }
+
+    // Section 12
+    .promoblock-wrapper__with-background_12 {
+        .text-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .phone-container {
+            padding-right: 0;
+        }
+        .phone-wrap {
+            width: 300px;
+        }
+        .btn-violet {
+            margin-top: 35px;
+        }
+    }
+    // Section 13
+    .promoblock-wrapper__with-background_13 {
+        .container {
+            padding-top: 150px;
+            padding-bottom: 115px;
+            margin-top: 38px;
+        }
+        .phone-body {
+            width: 292px;
+        }
+        .phone-img {
+            left: 8px;
+            width: 275px;
+            border-radius: 24px;
+        }
+        .phone-img-2 {
+            bottom: -32px;
+            left: 177px;
+            width: 294px;
+        }
+        .text-wrap {
+            justify-content: center;
         }
     }
 }
