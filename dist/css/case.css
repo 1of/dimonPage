@@ -43,7 +43,7 @@
   font-weight: 800;
   font-size: 39px;
   line-height: 47px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: inline-block;
   padding-top: 100px;
   padding-left: 100px;
@@ -54,7 +54,7 @@
 }
 
 .promoblock-title_color__violet {
-  color: #4926E1;
+  color: #4926e1;
 }
 
 .promoblock-title_mrgn-right__120 {
@@ -68,7 +68,7 @@
 .promoblock-messenger-icons-block {
   margin: 50px 0;
   margin-left: 100px;
-  border: dashed 2px #FFFFFF;
+  border: dashed 2px #ffffff;
   border-radius: 21px;
   width: 100%;
   max-width: 880px;
@@ -85,7 +85,7 @@
   width: 100px;
   height: 100px;
   border-radius: 18px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-right: 40px;
   display: flex;
   justify-content: center;
@@ -101,8 +101,8 @@
   font-size: 19px;
   line-height: 23px;
   font-weight: bold;
-  color: #4926E1;
-  background-color: #FFFFFF;
+  color: #4926e1;
+  background-color: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 0;
@@ -113,12 +113,13 @@
   right: -112px;
 }
 
-.promoblock-messenger-icon-button-link, .promoblock-messenger-icon-button-link:visited {
+.promoblock-messenger-icon-button-link,
+.promoblock-messenger-icon-button-link:visited {
   display: block;
   width: 100%;
   height: 100%;
   padding: 20px 16px;
-  color: #4926E1;
+  color: #4926e1;
   border-radius: 6px;
 }
 
@@ -139,7 +140,7 @@
   font-weight: bold;
   font-size: 34px;
   line-height: 40px;
-  color: #4926E1;
+  color: #4926e1;
   width: 142px;
   margin-right: 20px;
 }
@@ -169,7 +170,7 @@
 }
 
 .b-promoblock-link {
-  color: #0DA4FC;
+  color: #0da4fc;
   text-decoration: underline;
 }
 
@@ -199,10 +200,42 @@
 }
 
 .rotate:after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
-.l-wrapper *, ::after, ::before {
+.l-wrapper *,
+::after,
+::before {
   box-sizing: inherit;
+}
+
+@media (max-width: 1130px) {
+  .promoblock-title_pddng-top__30 {
+    margin-right: 0;
+    text-align: center;
+  }
+  .promoblock-links {
+    display: none;
+  }
+  .promoblock-messenger-icons-wrapper {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .promoblock-messenger-icons-block {
+    margin: auto;
+  }
+  .promoblock-messenger-icon {
+    width: 65px;
+    height: 65px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+  .promoblock-messenger-icon-button {
+    position: initial;
+  }
+  .container > .b-flex-clmn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
 }
